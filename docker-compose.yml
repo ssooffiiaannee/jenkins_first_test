@@ -1,11 +1,13 @@
 # Local Jenkins for trying the Jenkinsfile (optional).
-# Usage: docker compose up -d
+# Usage: docker compose up -d --build
 # Open http://localhost:8080 and complete the setup wizard.
 
 services:
   jenkins:
-    image: jenkins/jenkins:lts-jdk25
+    build: .
+    image: cursor-jenkins:local
     user: root
+    container_name: jenkins
     ports:
       - "8080:8080"
       - "50000:50000"
