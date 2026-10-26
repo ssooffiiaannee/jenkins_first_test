@@ -13,6 +13,9 @@ def test_greet():
 def  test_greet2():
     assert greet("Person") == "Hello, Person!"
 
+def  test_greet2():
+    assert greet("Norou") == "Hello, Norou!"
+
 def test_greet_empty_raises():
     with pytest.raises(ValueError):
         greet("   ")
