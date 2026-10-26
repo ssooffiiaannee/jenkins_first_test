@@ -10,6 +10,8 @@ def test_add():
 def test_greet():
     assert greet("World") == "Hello, World!"
 
+def  test_greet2():
+    assert greet("Person") == "Hello, Person!"
 
 def test_greet_empty_raises():
     with pytest.raises(ValueError):
